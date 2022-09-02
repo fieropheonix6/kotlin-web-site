@@ -41,17 +41,6 @@ sourceSets {
 Multiplatform Gradle plugin automatically adds a dependency to the platform-specific (iOS and Android) parts
 of `kotlinx.coroutines`.
 
-You'll also use the new memory manager for Kotlin/Native, which will become default soon. For this, add the following
-at the end of the `build.gradle.kts` file:
-
-```kotlin
-kotlin.targets.withType(org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget::class.java) {
-    binaries.all {
-        binaryOptions["memoryModel"] = "experimental"
-    }
-}
-```
-
 ### kotlinx.serialization
 
 For `kotlinx.serilization`, you need the plugin required by the build system. The Kotlin serialization plugin is shipped
@@ -341,7 +330,7 @@ is already imported and used in `ContentView.swift` with `import shared`.
    * The `greeting()` function was marked with the `@Throws(Exception::class)` annotation. So any exceptions that are
    instances of the `Exception` class or its subclass will be propagated as `NSError`, so you can handle them in the `completionHandler`.
    * When calling Kotlin `suspend` functions from Swift, completion handlers might be called on threads other than main,
-   see the [new memory manager migration guide](https://github.com/JetBrains/kotlin/blob/master/kotlin-native/NEW_MM.md#new-memory-manager-migration-guide).
+   see the [iOS intergation](native-ios-integration.md#completion-handlers) in the Kotlin/Native memory manager.
    That's why `DispatchQueue.main.async` is used to update `text` property.
 
 6. Run both the iOS and Android applications from Android Studio and make sure your app's logic is synced:
