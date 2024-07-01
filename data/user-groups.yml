@@ -345,6 +345,12 @@
     position:
       lat: 51.1605227
       lng: 71.4703558
+  - name: Islamabad Kotlin User Group
+    country: Pakistan
+    url: https://linktr.ee/IslamabadKUG
+    position:
+      lat: 33.6422
+      lng: 72.9903
   - name: KUG New Delhi
     country: India
     url: https://www.commudle.com/communities/kug-new-delhi
@@ -387,6 +393,12 @@
     position:
       lat: 30.6587488
       lng: 103.9354604
+  - name: Chennai KUG
+    country: India
+    url: https://linktr.ee/kugchennai
+    position:
+      lat: 13.067439
+      lng: 80.237617
   - name: Chongqing KUG
     country: China Mainland
     url: https://www.cqkug.com/
